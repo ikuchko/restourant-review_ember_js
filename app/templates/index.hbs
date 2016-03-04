@@ -1,3 +1,6 @@
-{{#each model as |restaurant|}}
-  {{restaurant-tile restaurant=restaurant addReview="addReview"}}
-{{/each}}
+  {{log isFormReviewShowes}}
+  {{#each model.restaurants as |restaurant|}}
+  <div class="restaurant">
+    {{restaurant-tile restaurant=restaurant addReview="addReview"}}
+  </div>
+  {{/each}}

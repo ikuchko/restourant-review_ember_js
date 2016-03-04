@@ -4,11 +4,11 @@ export default Ember.Component.extend({
   isFormReviewShowes: false,
 
   actions: {
-    openReviewForm() {
+    openNewReviewForm() {
       this.set('isFormReviewShowes', true);
     },
 
-    closeReviewForm() {
+    closeNewReviewForm() {
       this.set('isFormReviewShowes', false);
     },
 

@@ -1,11 +1,15 @@
+$vinous: rgba(107, 52, 52, 0.85);
+$light-vinous: #D0BBBB;
+$green: rgba(218, 241, 219, 0.85);
+$red: rgba(243, 192, 192, 0.85);
+$grey: rgba(242, 242, 242, 0.85);
+$yellow: #FFFB09;
 
 .restaurant-tile {
-  border: 1px solid;
   padding: 10px;
   width: 520px;
-  // span, h4, h3 {
-  //   display: inline-block;
-  // }
+  background-color: $vinous;
+  color: $light-vinous;
 }
 
 .inline {
@@ -20,4 +24,40 @@
 .image-filling {
   max-width: 100%;
   max-height: 100%;
+}
+
+.review-new--rating {
+  color: $yellow;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.review-new--transparent {
+  opacity: 0.5;
+  color: #5E2F2F !important;
+  font-size: 16px;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 8px 6px -2px black;
+	   -moz-box-shadow: 0 8px 6px -2px black;
+	        box-shadow: 0 8px 6px -2px black;
+}
+
+.inner-shadow {
+  -webkit-box-shadow: 0 8px 6px -2px black;
+	   -moz-box-shadow: 0 8px 6px -2px black;
+	        box-shadow: 0 8px 6px -2px black;
+}
+
+.review{
+  background-color: $grey;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.restaurant {
+  padding: 20px;
+  // border: 1px solid;
+  background-image: url(http://static1.squarespace.com/static/556cd817e4b0ee2d2afd5206/t/558c8840e4b048fd40237fbc/1435273309703/wood_background_amazing_art_for_desktop_computer_251_images.jpg?format=2500w);
 }

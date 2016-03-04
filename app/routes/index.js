@@ -1,8 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  rating: 0,
+  isFormReviewShowes: false,
+
   model() {
-    return this.store.findAll('restaurant');
+    return Ember.RSVP.hash({
+      restaurants: this.store.findAll('restaurant'),
+      reviews: this.store.findAll('review')
+    });
   },
 
   actions: {

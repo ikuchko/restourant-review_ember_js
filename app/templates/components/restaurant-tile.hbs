@@ -1,30 +1,41 @@
-<div class="restaurant-tile">
-  <div class="restaurant-tile__image">
-    <img src="{{restaurant.image}}" alt="{{restaurant.name}}" class="image-filling"/>
+<div class="row">
+  <div class="col-md-6">
+
+    <div class="restaurant-tile shadow">
+      <div class="restaurant-tile__image">
+        <img src="{{restaurant.image}}" alt="{{restaurant.name}}" class="image-filling"/>
+      </div>
+      <div class="restaurant-tile__description">
+        <div class="inline">
+          <span>Name: </span><h3>{{restaurant.name}}</h3>
+        </div>
+        <div class="inline">
+          <span>Cuisine: </span><h4>{{restaurant.cuisine}}</h4>
+        </div>
+        <div class="inline">
+          <span>Address: </span><h4>{{restaurant.address}}</h4>
+        </div>
+        <div class="inline">
+          <span>Contact: </span><h4>{{restaurant.phone}}</h4>
+        </div>
+        <div class="inline">
+          <span>Rating: </span><h4>{{restaurant.rating}}</h4>
+        </div>
+      </div>
+      <div class="review-new btn--float-right">
+        {{#if isFormReviewShowes}}
+        <button {{action 'closeNewReviewForm'}} class="btn btn-default">Close review</button>
+        {{review-new restaurant=restaurant addReview="addReview" closeReviewForm="closeReviewForm"}}
+        {{else}}
+        <button {{action 'openNewReviewForm'}} class="btn btn-default">Add review</button>
+        {{/if}}
+      </div>
+    </div>
   </div>
-  <div class="restaurant-tile__description">
-    <div class="inline">
-      <span>Name: </span><h3>{{restaurant.name}}</h3>
+
+  <div class="col-md-4">
+    <div class="restaurant-review">
+      {{review-form reviews=restaurant.reviews}}
     </div>
-    <div class="inline">
-      <span>Cuisine: </span><h4>{{restaurant.cuisine}}</h4>
-    </div>
-    <div class="inline">
-      <span>Address: </span><h4>{{restaurant.address}}</h4>
-    </div>
-    <div class="inline">
-      <span>Contact: </span><h4>{{restaurant.phone}}</h4>
-    </div>
-    <div class="inline">
-      <span>Rating: </span><h4>{{restaurant.rating}}</h4>
-    </div>
-  </div>
-  <div class="review btn--float-right">
-    {{#if isFormReviewShowes}}
-      <button {{action 'closeReviewForm'}} class="btn btn-default">Close review</button>
-      {{review-new restaurant=restaurant addReview="addReview" closeReviewForm="closeReviewForm"}}
-    {{else}}
-      <button {{action 'openReviewForm'}} class="btn btn-default">Add review</button>
-    {{/if}}
   </div>
 </div>

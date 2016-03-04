@@ -1,0 +1,12 @@
+{{#each reviews as |review|}}
+  <div class="review shadow">
+    <div class="review__header">
+      {{review.name}}
+      {{review.date}}
+      {{star-rating rating=review.rating}}
+    </div>
+    <div class="review__body">
+      <p>{{review.review}}</p>
+    </div>
+  </div>
+{{/each}}
