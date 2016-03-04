@@ -6,5 +6,5 @@ export default DS.Model.extend({
   address: DS.attr(),
   phone: DS.attr(),
   image: DS.attr(),
-  rating: DS.attr()
+  reviews: DS.hasMany('review', {async: true})
 });

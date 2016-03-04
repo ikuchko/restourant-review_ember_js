@@ -9,7 +9,6 @@ export default Ember.Component.extend({
         address: this.get('address'),
         phone: this.get('phone'),
         image: this.get('image'),
-        rating: 0
       };
       this.set('name', '');
       this.set('cuisine', '');

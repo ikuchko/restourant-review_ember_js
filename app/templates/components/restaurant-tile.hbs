@@ -19,4 +19,12 @@
       <span>Rating: </span><h4>{{restaurant.rating}}</h4>
     </div>
   </div>
+  <div class="review btn--float-right">
+    {{#if isFormReviewShowes}}
+      <button {{action 'closeReviewForm'}} class="btn btn-default">Close review</button>
+      {{review-new restaurant=restaurant addReview="addReview" closeReviewForm="closeReviewForm"}}
+    {{else}}
+      <button {{action 'openReviewForm'}} class="btn btn-default">Add review</button>
+    {{/if}}
+  </div>
 </div>
