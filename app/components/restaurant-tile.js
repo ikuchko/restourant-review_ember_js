@@ -4,9 +4,11 @@ export default Ember.Component.extend({
   isFormReviewShowes: false,
   reviews: Ember.computed.map('restaurant.reviews', function(reviews) { return reviews; }),
   rating: Ember.computed('rating', function(){
-    console.log(this.get('reviews')[0].rating);
-    // console.log(this.get('restaurant.reviews'));
-    return 2;
+    var rating = 0;
+    for (var review of this.get('reviews')) {
+      rating += review.get('rating');
+    }
+    return rating;
   }),
 
   actions: {
