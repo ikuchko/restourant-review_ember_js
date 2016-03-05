@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       this.set('name', '');
       this.set('review', '');
       this.sendAction('addReview', params);
-      this.sendAction('closeReviewForm');
+      this.sendAction('closeNewReviewForm');
     },
 
     updateRating(params) {

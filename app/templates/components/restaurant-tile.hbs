@@ -2,6 +2,7 @@
   <div class="col-md-6">
 
     <div class="restaurant-tile shadow">
+      {{rating}}
       <div class="restaurant-tile__image">
         <img src="{{restaurant.image}}" alt="{{restaurant.name}}" class="image-filling"/>
       </div>
@@ -25,7 +26,7 @@
       <div class="review-new btn--float-right">
         {{#if isFormReviewShowes}}
         <button {{action 'closeNewReviewForm'}} class="btn btn-default">Close review</button>
-        {{review-new restaurant=restaurant addReview="addReview" closeReviewForm="closeReviewForm"}}
+        {{review-new restaurant=restaurant addReview="addReview" closeNewReviewForm="closeNewReviewForm"}}
         {{else}}
         <button {{action 'openNewReviewForm'}} class="btn btn-default">Add review</button>
         {{/if}}

@@ -1,8 +1,8 @@
-{{#each reviews as |review|}}
-  <div class="review shadow">
+{{#each (review-sorting reviews) as |review|}}
+  <div class="review shadow {{review-color review.rating}}">
     <div class="review__header">
-      {{review.name}}
-      {{review.date}}
+      <strong>{{review.name}}</strong>
+      <span class="float-right">{{moment-from-now review.date}}</span>
       {{star-rating rating=review.rating}}
     </div>
     <div class="review__body">
