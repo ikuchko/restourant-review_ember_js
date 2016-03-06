@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-6">
-
-
-        <!-- <img src="./img/favorites.png" alt="" class="icon" /> -->
-        <!-- <img src="./img/add_to_favorites.png" alt="" class="icon"/> -->
-        <img src="./img/add1_to_favorites.png" alt="" class="icon">
+    {{#if isFavoriteIconShowes}}
+      <!-- <img src="./img/favorites.png" alt="" class="icon" /> -->
+      <!-- <img src="./img/add_to_favorites.png" alt="" class="icon"/> -->
+      <img src="./img/add1_to_favorites.png" alt="" class="icon">
+    {{/if}}
     <div class="restaurant-tile shadow">
       {{star-rating rating=rating}}
       <div class="restaurant-tile__image">
