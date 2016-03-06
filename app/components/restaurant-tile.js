@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     for (var review of this.get('reviews')) {
       rating += review.get('rating');
     }
-    return rating;
+    return Math.round(rating / this.get('reviews').length);
   }),
 
   actions: {
