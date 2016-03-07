@@ -1,16 +1,14 @@
 <div class="row">
   <div class="col-md-6">
-    {{#if isFavoriteIconShowes}}
-      <!-- <img src="./img/favorites.png" alt="" class="icon" /> -->
-      <!-- <img src="./img/add_to_favorites.png" alt="" class="icon"/> -->
-      <img src="./img/add1_to_favorites.png" alt="" class="icon">
-    {{/if}}
     <div class="restaurant-tile shadow">
       {{star-rating rating=rating}}
       <div class="restaurant-tile__image">
         <img src="{{restaurant.image}}" alt="{{restaurant.name}}" class="image-filling"/>
       </div>
       <div class="restaurant-tile__description">
+        {{#unless onFavoritePage}}
+          {{is-favorite restaurant=restaurant}}
+        {{/unless}}
         <div class="inline">
           <span>Name: </span><h3>{{restaurant.name}}</h3>
         </div>

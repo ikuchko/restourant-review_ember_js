@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  shoppingCart: Ember.inject.service(),
+  favorite: Ember.inject.service(),
   isFormReviewShowes: false,
   isFavoriteIconShowes: false,
 
@@ -14,14 +14,6 @@ export default Ember.Component.extend({
     return Math.round(rating / this.get('reviews').length);
   }),
 
-  mouseEnter: function() {
-    console.log('show!')
-    this.set('isFavoriteIconShowes', true);
-  },
-
-  mouseLeave: function() {
-    this.set('isFavoriteIconShowes', false);
-  },
 
   actions: {
     openNewReviewForm() {
@@ -34,10 +26,6 @@ export default Ember.Component.extend({
 
     addReview(params) {
       this.sendAction('addReview', params);
-    },
-
-    addFavorite(restaurant) {
-      this.get('shoppingCart').add(restaurant);
     },
   }
 });

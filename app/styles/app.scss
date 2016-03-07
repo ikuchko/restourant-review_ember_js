@@ -1,6 +1,6 @@
 $vinous: rgba(107, 52, 52, 0.35);
 $light-pink: #FFEAEA;
-$green: rgba(218, 241, 219, 0.65);
+$green: rgba(180, 253, 183, 0.65);
 $red: rgba(243, 192, 192, 0.65);
 $grey: rgba(242, 242, 242, 0.65);
 $yellow: #FFFB09;
@@ -15,8 +15,29 @@ $yellow: #FFFB09;
   width: 40px;
   height: 40px;
   position: absolute;
-  left: 88%;
-  color: white;
+  left: 86%;
+  top: 67%;
+  cursor: pointer;
+}
+
+.icon-header {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -16px;
+  top: 0px;
+  cursor: po
+}
+
+#icon-relative {
+  position: relative;
+  top: 10px;
+  z-index: 99;
+}
+
+.absolute {
+  width: 15%;
+  position: absolute;
 }
 
 .inline {

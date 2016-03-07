@@ -1,0 +1,6 @@
+{{log favorite}}
+{{#each favorite.items as |restaurant|}}
+<div class="restaurant">
+  {{restaurant-tile restaurant=restaurant addReview="addReview" onFavoritePage=true}}
+</div>
+{{/each}}
