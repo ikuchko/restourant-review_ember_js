@@ -11,7 +11,11 @@ export default Ember.Component.extend({
     for (var review of this.get('reviews')) {
       rating += review.get('rating');
     }
-    return Math.round(rating / this.get('reviews').length);
+    if (rating === 0) {
+      return 0;
+    } else {
+      return Math.round(rating / this.get('reviews').length);
+    }
   }),
 
 
