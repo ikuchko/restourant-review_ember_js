@@ -5,10 +5,18 @@ export default Ember.Component.extend({
 
   isFavorite: false,
 
-  click: function() {
-    if (!this.get('isFavorite')) {
-      this.set('isFavorite', true)
-      this.get('favorite').add(this.get('restaurant'));
+  actions: {
+    addToFavorite() {
+      if (!this.get('isFavorite')) {
+        this.set('isFavorite', true)
+        this.get('favorite').add(this.get('restaurant'));
+      }
+    },
+
+    removeFromFavorite() {
+      this.set('isFavorite', false)
+      this.get('favorite').remove(this.get('restaurant'));
     }
-  },
+  }
+
 });

@@ -9,34 +9,34 @@
         {{#unless onFavoritePage}}
           {{is-favorite restaurant=restaurant}}
         {{/unless}}
-        <div class="inline">
-          <span>Name: </span><h3>{{restaurant.name}}</h3>
+        <div>
+          <p><strong>Name: </strong>{{restaurant.name}}</p>
         </div>
-        <div class="inline">
-          <span>Cuisine: </span><h4>{{restaurant.cuisine}}</h4>
+        <div>
+          <p><strong>Cuisine: </strong>{{restaurant.cuisine}}</p>
         </div>
-        <div class="inline">
-          <span>Address: </span><h4>{{restaurant.address}}</h4>
+        <div>
+          <p><strong>Address: </strong>{{restaurant.address}}</p>
         </div>
-        <div class="inline">
-          <span>Contact: </span><h4>{{restaurant.phone}}</h4>
+        <div>
+          <p><strong>Contact: </strong>{{restaurant.phone}}</p>
         </div>
-        <div class="inline">
-          <span>Rating: </span><h4>{{restaurant.rating}}</h4>
+        <div>
+        <p><strong>Rating: </strong>{{restaurant.rating}}</p>
         </div>
       </div>
       <div class="review-new btn--float-right">
         {{#if isFormReviewShowes}}
-        <button {{action 'closeNewReviewForm'}} class="btn btn-default">Close review</button>
-        {{review-new restaurant=restaurant addReview="addReview" closeNewReviewForm="closeNewReviewForm"}}
+          <button {{action 'closeNewReviewForm'}} class="btn btn-default">Close review</button>
+          {{review-new restaurant=restaurant addReview="addReview" closeNewReviewForm="closeNewReviewForm"}}
         {{else}}
-        <button {{action 'openNewReviewForm'}} class="btn btn-default">Add review</button>
+          <button {{action 'openNewReviewForm'}} class="btn btn-default">Add review</button>
         {{/if}}
       </div>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="restaurant-review">
       {{review-form reviews=restaurant.reviews}}
     </div>

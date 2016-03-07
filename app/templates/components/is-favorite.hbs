@@ -2,7 +2,7 @@
 <!-- <img src="./img/add_to_favorites.png" alt="" class="icon"/> -->
 <!-- <img src="./img/add1_to_favorites.png" alt="" class="icon"> -->
 {{#if isFavorite}}
-  <img src="./img/favorites.png" alt="favorite" class="icon" />
+  <img src="./img/favorites.png" alt="favorite" class="icon" {{action 'removeFromFavorite'}}/>
 {{else}}
-  <img src="./img/add2_to_favorites.png" alt="favorite" class="icon" />
+  <img src="./img/add2_to_favorites.png" alt="favorite" class="icon" {{action 'addToFavorite'}}/>
 {{/if}}
